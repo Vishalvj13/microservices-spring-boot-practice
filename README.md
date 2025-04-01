@@ -73,7 +73,7 @@ mvn spring-boot:run
 #jpa-properties     - Configures Hibernate for schema handling, SQL logging, and dialect settings.
 #eureka-properties  - Manages service registration and discovery with Eureka.
 ```
-### **application.properties (Quiz Service, Question Service)**
+### **application.properties (Service Registry)**
 ```properties
 #eureka-properties  - Manages service registration and discovery with Eureka and ensures the service registers with Eureka for discovery but does not act as a client itself.
 ```
