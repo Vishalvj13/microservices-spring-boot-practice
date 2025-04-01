@@ -1,0 +1,1053 @@
+{
+	"info": {
+		"_postman_id": "f305dadb-bd33-426d-ba4c-3d2283d70a96",
+		"name": "Microservices",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "43035848"
+	},
+	"item": [
+		{
+			"name": "QuizService",
+			"item": [
+				{
+					"name": "CreateQuiz",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"React.js Quiz\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/quiz",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"quiz"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "ResponseCreateQuiz",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\":\"React.js Quiz\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8081/quiz",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"quiz"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 01 Apr 2025 07:17:29 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 7,\n    \"title\": \"React.js Quiz\"\n}"
+						}
+					]
+				},
+				{
+					"name": "GetAllQuizes",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"Python Quiz\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/quiz",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"quiz"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "ResponseGetAllQuizes",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\":\"Python Quiz\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8081/quiz",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"quiz"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 01 Apr 2025 08:04:15 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 4,\n        \"title\": \"Java Quiz\"\n    },\n    {\n        \"id\": 6,\n        \"title\": \"Python Quiz\"\n    },\n    {\n        \"id\": 7,\n        \"title\": \"React.js Quiz\"\n    }\n]"
+						},
+						{
+							"name": "ResponseGetAllQuizesIncludingQuestions",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\":\"Python Quiz\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8081/quiz",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"quiz"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 01 Apr 2025 10:51:27 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"title\": \"Java\",\n        \"questions\": [\n            {\n                \"questionId\": 2,\n                \"question\": \"What is Java?\",\n                \"quizId\": 1\n            },\n            {\n                \"questionId\": 4,\n                \"question\": \"Who invented Java?\",\n                \"quizId\": 1\n            },\n            {\n                \"questionId\": 6,\n                \"question\": \"What are OOPS principles in Java?\",\n                \"quizId\": 1\n            }\n        ]\n    },\n    {\n        \"id\": 2,\n        \"title\": \"React.js\",\n        \"questions\": [\n            {\n                \"questionId\": 1,\n                \"question\": \"What is React?\",\n                \"quizId\": 2\n            },\n            {\n                \"questionId\": 3,\n                \"question\": \"Who invented React?\",\n                \"quizId\": 2\n            }\n        ]\n    },\n    {\n        \"id\": 3,\n        \"title\": \"MySQL\",\n        \"questions\": []\n    },\n    {\n        \"id\": 4,\n        \"title\": \"SpringBoot\",\n        \"questions\": [\n            {\n                \"questionId\": 5,\n                \"question\": \"SpringBoot is based on which principle?\",\n                \"quizId\": 4\n            }\n        ]\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "GetQuiz",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"Python Quiz\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/quiz/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"quiz",
+								"4"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "ResponseGetQuiz",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\":\"Python Quiz\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8081/quiz/4",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"quiz",
+										"4"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 01 Apr 2025 08:04:45 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 4,\n    \"title\": \"Java Quiz\"\n}"
+						}
+					]
+				},
+				{
+					"name": "DeleteQuiz",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"Python Quiz\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/quiz/remove-quiz/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"quiz",
+								"remove-quiz",
+								"5"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "ResponseDeleteQuiz",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\":\"Python Quiz\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8081/quiz/remove-quiz/5",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"quiz",
+										"remove-quiz",
+										"5"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Content-Length",
+									"value": "0"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 01 Apr 2025 07:52:31 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "QuestionService",
+			"item": [
+				{
+					"name": "CreateQuestion",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"question\":\"What is mysql?\",\r\n    \"quizId\":4\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8082/question",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"question"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "ResponseCreateQuestion",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"question\":\"What is mysql?\",\r\n    \"quizId\":4\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8082/question",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8082",
+									"path": [
+										"question"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 01 Apr 2025 07:19:53 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"questionId\": 5,\n    \"question\": \"What is mysql?\",\n    \"quizId\": 4\n}"
+						}
+					]
+				},
+				{
+					"name": "GetAllQuestions",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"Python Quiz\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8082/question",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"question"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "ResponseGetAllQuestions",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\":\"Python Quiz\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8082/question",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8082",
+									"path": [
+										"question"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 01 Apr 2025 08:05:19 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"questionId\": 3,\n        \"question\": \"What is java?\",\n        \"quizId\": 4\n    },\n    {\n        \"questionId\": 4,\n        \"question\": \"What is python?\",\n        \"quizId\": 6\n    },\n    {\n        \"questionId\": 6,\n        \"question\": \"What is react.js?\",\n        \"quizId\": 7\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "GetQuestionsByQuizId",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"Python Quiz\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8082/question/quiz/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"question",
+								"quiz",
+								"4"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "ResponseGetQuestionsByQuizId",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\":\"Python Quiz\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8082/question/quiz/4",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8082",
+									"path": [
+										"question",
+										"quiz",
+										"4"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 01 Apr 2025 08:11:14 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"questionId\": 3,\n        \"question\": \"What is java?\",\n        \"quizId\": 4\n    },\n    {\n        \"questionId\": 7,\n        \"question\": \"Who invented java?\",\n        \"quizId\": 4\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "DeleteQuestion",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"Python Quiz\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8082/question/remove-question/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"question",
+								"remove-question",
+								"5"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "ResponseDeleteQuestion",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\":\"Python Quiz\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8082/question/remove-question/5",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8082",
+									"path": [
+										"question",
+										"remove-question",
+										"5"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Content-Length",
+									"value": "0"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 01 Apr 2025 07:54:17 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "GetQuestion",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"Python Quiz\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8082/question/6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"question",
+								"6"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "ResponseGetQuestion",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\":\"Python Quiz\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8082/question/6",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8082",
+									"path": [
+										"question",
+										"6"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 01 Apr 2025 08:05:51 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"questionId\": 6,\n    \"question\": \"What is react.js?\",\n    \"quizId\": 7\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "ServiceRegistry",
+			"item": [
+				{
+					"name": "EurekaServer",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8761/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8761",
+							"path": [
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "ResponseEurekaServer",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8761/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8761",
+									"path": [
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "html",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/html;charset=UTF-8"
+								},
+								{
+									"key": "Content-Language",
+									"value": "en-IN"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 01 Apr 2025 17:00:45 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "<!doctype html><html lang=\"en\"><head><base href=\"/\"><meta charset=\"utf-8\"><title>Eureka</title><meta name=\"description\" content=\"\"><meta name=\"viewport\" content=\"width=device-width\"><link rel=\"stylesheet\" href=\"eureka/css/wro.css\">\n\n  </head><body id=\"one\"><script type=\"text/javascript\">\n      if ( document.documentMode ) {\n         document.write('<p>You are using an <strong>outdated</strong> browser. Please upgrade your browser to improve your experience.</p>');\n      }\n    </script><nav class=\"navbar navbar-expand-md navbar-dark\" role=\"navigation\"><div class=\"container\"><a class=\"navbar-brand my-auto\" href=\"\"><span></span></a><button type=\"button\" class=\"navbar-toggler\" data-bs-toggle=\"collapse\" data-bs-target=\"#navbarContent\" aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\"><span class=\"navbar-toggler-icon\"></span></button><div class=\"collapse navbar-collapse\" id=\"navbarContent\"><ul class=\"navbar-nav ms-auto\"><li class=\"nav-item\"><a class=\"nav-link px-2\" href=\"\">Home</a></li><li class=\"nav-item\"><a class=\"nav-link px-2\" href=\"/lastn\">Last 1000 since startup</a></li>\n      </ul>\n    </div>\n  </div></nav><div class=\"container-fluid xd-container\"><h1>System Status</h1><div class=\"row\"><div class=\"col-md-6\"><table id='instances' class=\"table table-condensed table-striped table-hover\"><tr><td>Environment</td><td>test</td></tr><tr><td>Data center</td><td>default</td></tr>\n    </table>\n  </div><div class=\"col-md-6\"><table id='instances' class=\"table table-condensed table-striped table-hover\"><tr><td>Current time</td><td>2025-04-01T22:30:45 +0530</td></tr><tr><td>Uptime</td><td>04:16</td></tr><tr><td>Lease expiration enabled</td><td>true</td></tr><tr><td>Renews threshold</td><td>6</td></tr><tr><td>Renews (last min)</td><td>12</td></tr>\n    </table>\n  </div></div><h1>DS Replicas</h1><ul class=\"list-group mb-3\"><li class=\"list-group-item\"><a href=\"http://localhost:8761/eureka/\">localhost</a></li></ul><h1>Instances currently registered with Eureka</h1><table id='instances' class=\"table table-striped table-hover\"><thead><tr><th>Application</th><th>AMIs</th><th>Availability Zones</th><th>Status</th></tr>\n        </thead><tbody><tr><td><b>API-GATEWAY</b></td><td><b>n/a</b> (1)</td><td><b></b> (1)</td><td><b>UP</b> (1) -<a href=\"http://APC:8083/actuator/info\" target=\"_blank\">APC:API-GATEWAY:8083</a></td>\n              </tr><tr><td><b>QUESTION-SERVICE</b></td><td><b>n/a</b> (1)</td><td><b></b> (1)</td><td><b>UP</b> (1) -<a href=\"http://APC:8082/actuator/info\" target=\"_blank\">APC:QUESTION-SERVICE:8082</a></td>\n              </tr><tr><td><b>QUIZ-SERVICE</b></td><td><b>n/a</b> (1)</td><td><b></b> (1)</td><td><b>UP</b> (1) -<a href=\"http://APC:8081/actuator/info\" target=\"_blank\">APC:QUIZ-SERVICE:8081</a></td>\n              </tr>\n\n        </tbody>\n      </table><h1>General Info</h1><table id='generalInfo' class=\"table table-striped table-hover\"><thead><tr><th>Name</th><th>Value</th></tr>\n        </thead><tbody><tr><td>total-avail-memory</td><td>77mb</td></tr><tr><td>num-of-cpus</td><td>8</td></tr><tr><td>current-memory-usage</td><td>60mb (77%)</td></tr><tr><td>server-uptime</td><td>04:16</td></tr><tr><td>registered-replicas</td><td>http://localhost:8761/eureka/</td></tr><tr><td>unavailable-replicas</td><td>http://localhost:8761/eureka/,</td></tr><tr><td>available-replicas</td><td></td></tr>\n        </tbody>\n      </table><h1>Instance Info</h1><table id='instanceInfo' class=\"table table-striped table-hover\"><thead><tr><th>Name</th><th>Value</th></tr><thead><tbody><tr><td>ipAddr</td><td>192.168.77.117</td></tr><tr><td>status</td><td>UP</td></tr>\n        </tbody>\n      </table>\n    </div><script type=\"text/javascript\" src=\"eureka/js/wro.js\" ></script></body></html>\n"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "ApiGateway",
+			"item": [
+				{
+					"name": "QuizServiceApiGatewayEndPoint",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8083/quiz",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"quiz"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "QuizServiceEndpointResponse",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8083/quiz",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8083",
+									"path": [
+										"quiz"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Tue, 01 Apr 2025 17:03:29 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"title\": \"Java\",\n        \"questions\": [\n            {\n                \"questionId\": 2,\n                \"question\": \"What is Java?\",\n                \"quizId\": 1\n            },\n            {\n                \"questionId\": 4,\n                \"question\": \"Who invented Java?\",\n                \"quizId\": 1\n            },\n            {\n                \"questionId\": 6,\n                \"question\": \"What are OOPS principles in Java?\",\n                \"quizId\": 1\n            }\n        ]\n    },\n    {\n        \"id\": 2,\n        \"title\": \"React.js\",\n        \"questions\": [\n            {\n                \"questionId\": 1,\n                \"question\": \"What is React?\",\n                \"quizId\": 2\n            },\n            {\n                \"questionId\": 3,\n                \"question\": \"Who invented React?\",\n                \"quizId\": 2\n            }\n        ]\n    },\n    {\n        \"id\": 3,\n        \"title\": \"MySQL\",\n        \"questions\": []\n    },\n    {\n        \"id\": 4,\n        \"title\": \"SpringBoot\",\n        \"questions\": [\n            {\n                \"questionId\": 5,\n                \"question\": \"SpringBoot is based on which principle?\",\n                \"quizId\": 4\n            }\n        ]\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "QuestionServiceApiGatewayEndPoint",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8083/question",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"question"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "QuestionServiceApiGatewayEndPoint Copy",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8083/question",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8083",
+									"path": [
+										"question"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Tue, 01 Apr 2025 17:34:37 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"questionId\": 1,\n        \"question\": \"What is React?\",\n        \"quizId\": 2\n    },\n    {\n        \"questionId\": 2,\n        \"question\": \"What is Java?\",\n        \"quizId\": 1\n    },\n    {\n        \"questionId\": 3,\n        \"question\": \"Who invented React?\",\n        \"quizId\": 2\n    },\n    {\n        \"questionId\": 4,\n        \"question\": \"Who invented Java?\",\n        \"quizId\": 1\n    },\n    {\n        \"questionId\": 5,\n        \"question\": \"SpringBoot is based on which principle?\",\n        \"quizId\": 4\n    },\n    {\n        \"questionId\": 6,\n        \"question\": \"What are OOPS principles in Java?\",\n        \"quizId\": 1\n    }\n]"
+						}
+					]
+				}
+			]
+		}
+	]
+}
